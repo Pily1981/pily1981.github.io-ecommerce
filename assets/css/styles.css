@@ -1,0 +1,112 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+ body {
+    font-family:'Lucida Sans', sans-serif;
+ }
+
+
+/*Grilla de la pagina*/
+.grid-container {
+    display: grid;
+    grid-template-columns: 15rem auto;
+    grid-template-areas:
+    "header header"
+    "asidebar main"
+    "footer footer";
+    height: 100vh;
+}
+
+header, footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px;
+    background-color: #d8a47f
+}
+
+header{
+    grid-area: header;    
+}
+
+/* Barra Lateral - Aside Bar*/
+aside {
+    grid-area: asidebar;
+    display:flex;
+    flex-direction: column;
+    padding: 2rem;
+    background-color: #dddada;
+}
+
+aside h4{
+   padding-bottom: 5px;
+}
+
+aside li{
+    margin-top: 15px;
+    font-size: 15px;
+    list-style: none;
+}
+
+aside a{
+    color: #808080;
+}
+
+/* Inicio del Main*/
+main {
+    grid-area: main;
+    background-image: url(../img/fondo.webp);
+    background-size:cover;
+}
+
+/* Contenedor Productos*/
+.card-conteiner {
+    display: grid;   
+    grid-template-columns: 1fr 1fr 1fr;  
+    gap: 5px;
+    margin:5px;   
+} 
+
+/* Tarjetas de Productos*/
+.card{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;    
+    align-items: center;   
+}
+
+.card img {   
+    width: 56%;
+    margin-top: 10px;    
+    
+}
+
+.card h5{
+    padding-top: 5px;
+    text-align:center;
+}
+
+.card p{
+    padding-top: 5px;
+    font-size: 12px;
+}
+
+/*Boton de tarjetas*/
+.boton {
+    background-color:#d8a47f;
+    color:#fff;
+    font-weight: bold;
+    font-size: 12px;
+    width: 100%;
+    text-align: center;
+    margin-top: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;    
+}
+
+/*Footer*/
+footer {
+    grid-area: footer;
+}
